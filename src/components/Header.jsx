@@ -18,7 +18,7 @@ const Header = () => {
             queryParams.set("search", debouncedSearchTerm);
         }
         if (selectedGenre !== "All") {
-            queryParams.set("genre", selectedGenre); // Add genre to query params
+            queryParams.set("genre", selectedGenre);
         }
         navigate({ search: queryParams.toString() }, { replace: true });
     }, [debouncedSearchTerm, selectedGenre, navigate]);

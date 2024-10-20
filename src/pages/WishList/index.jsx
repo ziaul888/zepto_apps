@@ -1,4 +1,4 @@
-// src/pages/Wishlist.js
+
 import React, { useState } from 'react';
 import Card from '../../components/UI/Card';
 
@@ -7,10 +7,7 @@ const Wishlist = () => {
   const [wishlistBooks,setWishlistBooks] = useState(books)
 
   const handleUpdateWishlist = (bookId) => {
-    // Filter out the book that was removed from wishlist
     const updatedBooks = wishlistBooks.filter((book) => book.id !== bookId);
-
-    // Update state and localStorage
     setWishlistBooks(updatedBooks);
     localStorage.setItem('wishlist', JSON.stringify(updatedBooks));
   };
@@ -27,6 +24,7 @@ const Wishlist = () => {
 							formats={book?.formats}
                             id={book?.id}
 							handleUpdateWishlist={handleUpdateWishlist}
+                            genres={book?.genres}
 						/>
 					))}
 				</div>

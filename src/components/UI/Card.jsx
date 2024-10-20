@@ -56,7 +56,7 @@ const Card = ({ title, authors, formats, id, handleUpdateWishlist,genres }) => {
         <p className="text-center text-[14px] sm:text-[12px]">Genre: {genres.length > 0 ? genres[0] : 'Unknown Genre'}</p>
       </Link>
       <div
-        className={`absolute bottom-[43%] right-2 ${isHovered ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out cursor-pointer`}
+        className={`absolute bottom-[40%] right-2 ${isHovered ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out cursor-pointer`}
       >
         <button
           onClick={(e) => addToWishlists(e, book)}

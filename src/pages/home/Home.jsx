@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Layout from "../../components/Layout";
 import Card from "../../components/UI/Card";
 import useFetch from "../../hook/useFetch";
 import { useLocation } from "react-router-dom";
+import Loader from "../../components/UI/Loader";
 
 const useQuery = () => {
     return new URLSearchParams(useLocation().search);
@@ -34,13 +34,7 @@ const Home = () => {
 	return (
 		<div className="w-full max-w-[1200px] mx-auto mt-4">
 			{loading && (
-				<div className="loading-container">
-					<div className="loading-dots">
-						<span className="dot"></span>
-						<span className="dot"></span>
-						<span className="dot"></span>
-					</div>
-				</div>
+				<Loader/>
 			)}
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
